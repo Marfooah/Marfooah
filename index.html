@@ -3,216 +3,120 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marfooah – Coming Soon</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <title>Marfooah | A Divine Tech Revolution</title>
   <style>
+    /* 🌙 Base Styles */
     body {
       margin: 0;
-      padding: 0;
-      background-color: #27332F
-; /* Main background from palette */
+      padding: 2rem;
+      background-color: #1D1A1A; /* replace if you want your GIF bg */
+      color: #ffffff;
       font-family: 'Playfair Display', serif;
-      color: #333333;
-      overflow-x: hidden;
-    }
-
-    .main-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      min-height: 100vh;
       text-align: center;
-      padding: 0;
     }
 
-    .main-gif {
-      width: 100%;
-      max-width: 800px;
-      display: block;
-      margin: 20px 0;
-    }
-.fade-line {
-  color: #D3BFB4; /* or pick a subtle, clean color from your palette */
-}
-@media (max-width: 768px) {
-  .tagline {
-    font-size: 1.2rem;
-    margin-top: 20px;
-    text-align: center;
-  }
-
-  .ayah-text {
-    font-size: 0.95rem;
-    line-height: 1.7;
-    padding: 0 20px;
-    text-align: center;
-  }
-
-  .intro {
-    font-size: 1.2rem;
-  }
-
-  .fade-line {
-    font-size: 0.95rem;
-  }
-
-  .highlight,
-  .keyword {
-    font-weight: 600;
-  }
-}
-@media (max-width: 768px) {
-  .gif-container img {
-    max-width: 90vw;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-}
-
-    /* Brand tagline below GIF */
-    .tagline {
-  margin-top: 30px; /* adds breathing space from GIF */
-  font-size: 1.6rem;
-  color: #9FA79E;
-  animation: shimmer 2.5s infinite ease-in-out;
-  font-weight: 500;
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  letter-spacing: 1px;
-}
-
-
-    @keyframes shimmer {
-      0%, 100% {
-        opacity: 0.4;
-      }
-      50% {
-        opacity: 1;
-      }
-    }
-
-    /* Crescent + Ayah Block */
-    .ayah-block {
+    /* ✨ Scroll Animation */
+    .fade-in {
       opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 1.6s ease, transform 1.6s ease;
-      margin: 40px auto;
-      max-width: 700px;
+      transform: translateY(30px);
+      transition: opacity 1.5s ease-out, transform 1.5s ease-out;
     }
 
-    .ayah-block.visible {
+    .fade-in.visible {
       opacity: 1;
       transform: translateY(0);
     }
-/* Fade line by line */
-.fade-line {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 1.2s ease;
-}
 
-/* Delay classes for sequence */
-.delay-1 { transition-delay: 0.5s; }
-.delay-2 { transition-delay: 1s; }
-.delay-3 { transition-delay: 1.5s; }
-.delay-4 { transition-delay: 2s; }
-
-/* Highlighted words */
-.keyword {
-  color: #9FA79E; /* calming sage from your palette */
-  font-weight: 600;
-}
-.highlight {
-  color: #E8E6E3; /* rusty gold */
-  font-weight: bold;
-}
-.intro {
-  font-size: 1.5rem;
-  color: #E8E6E3;
-  font-weight: bold;
-}
-
-  
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
+    /* 🌟 Shimmer Effect */
+    .shimmer {
+      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0) 100%);
+      background-size: 200% 100%;
+      animation: shimmer 2.5s infinite linear;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
     }
 
-    .ayah-text {
-      font-size: 1.4rem;
-      line-height: 1.8;
+    @keyframes shimmer {
+      0% {
+        background-position: -100% 0;
+      }
+      100% {
+        background-position: 100% 0;
+      }
+    }
+
+    /* 🔠 Text Styling */
+    .tagline {
+      font-size: 1.3rem;
+      margin-top: 1rem;
       font-style: italic;
-      padding: 20px;
-      color: #9FA79E;
+      opacity: 0.8;
     }
+    .quran::before {
+  content: "🌙 ";
+  font-size: 1.2rem;
+}
 
-    .highlight {
-      color: #E8E6E3;
-      font-weight: bold;
-    }
+<div style="height: 200px;"></div>
 
-    .coming-soon {
-      margin-top: 20px;
+    .quran {
       font-size: 1rem;
+      margin-top: 2.5rem;
+      color: #9FA79E;
+      line-height: 1.7;
+      max-width: 90%;
+    }
+
+    .secure {
+      margin-top: 2.5rem;
+      font-size: 0.85rem;
       color: #888;
       font-style: italic;
+    }
+
+    .logo {
+      max-width: 90%;
+      height: auto;
     }
   </style>
 </head>
 <body>
+  <div class="fade-in">
+    <img src="marfooah.gif" alt="Marfooah Coming Soon" class="logo" />
+  </div>
 
-  <div class="main-container">
-    <!-- GIF -->
-    <img src="marfooah-coming-soon.gif" alt="Marfooah Revolution GIF" class="main-gif" />
+  <div class="fade-in tagline shimmer">A divine tech revolution is rising...</div>
 
-    <!-- Tagline -->
-    <div class="tagline">A divine tech revolution is rising...</div>
-
-    <!-- Crescent + Ayah -->
-    <div class="ayah-block" id="ayah">
-     
-      <div class="ayah-text">
-  <p class="fade-line">
-    <strong class="intro">🌙 Allah has promised</strong> those of you who believe and do good that 
-    <strong class="highlight">He will certainly make them successors in the land</strong> as He did with those before them;
-  </p>
-  <p class="fade-line delay-1">
-    and <strong class="highlight">will surely establish for them</strong> their 
-    <strong class="keyword">faith</strong> which He has chosen for them; and 
-    <strong class="highlight">will change</strong> their fear into 
-    <strong class="keyword">security</strong>—
-  </p>
-  <p class="fade-line delay-2">
-    <em>“ ˹provided that˺ they worship Me, associating nothing with Me.”</em>
-  </p>
-  <p class="fade-line delay-3">
-    <strong>But whoever disbelieves after this ˹promise˺, it is they who will be the rebellious.</strong>
-  </p>
-  <p class="fade-line delay-4">
-    <em>— Surah An-Nur (24:55)</em>
-  </p>
+ <div class="fade-in quran">
+  <strong>Allah has promised</strong> those who have believed among you and done righteous deeds that <strong>He will surely grant them succession</strong> [authority] upon the earth just as He granted it to those before them.<br><br>
+  And that <strong>He will surely establish for them</strong> [therein] their religion which He has preferred for them, and that <strong>He will surely substitute for them</strong>, after their fear, security —<br><br>
+  <em>“They worship Me, not associating anything with Me.”</em><br><br>
+  <strong>But whoever disbelieves after this ˹promise˺—it is they who are the rebellious.</strong><br><br>
+  <em>— Surah An-Nur (24:55)</em>
 </div>
 
 
-   <!-- Coming Soon Note -->
-      <div class="coming-soon">Coming soon... marfooah.com</div>
-    </div>
-  </div>
+  <div class="fade-in secure">(Secure site launching soon...)</div>
 
-  <!-- Scroll Activation Script -->
+  <!-- ⚙️ JavaScript for Scroll Observer -->
   <script>
-   window.addEventListener('scroll', () => {
-  const ayahBlock = document.getElementById('ayah');
-  const lines = document.querySelectorAll('.fade-line');
-  const blockTop = ayahBlock.getBoundingClientRect().top;
-  const triggerPoint = window.innerHeight * 0.85;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
 
-  if (blockTop < triggerPoint) {
-    ayahBlock.classList.add('visible');
-    lines.forEach(line => line.style.opacity = 1);
-    lines.forEach(line => line.style.transform = 'translateY(0)');
-  }
-});
-
+    document.querySelectorAll('.fade-in').forEach((el) => {
+      observer.observe(el);
+    });
   </script>
-
 </body>
 </html>
