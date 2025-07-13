@@ -27,16 +27,22 @@
       display: block;
       margin: 0 auto;
     }
+.fade-line {
+  color: #D3BFB4; /* or pick a subtle, clean color from your palette */
+}
 
     /* Brand tagline below GIF */
     .tagline {
-      margin-top: -20px;
-      font-size: 1.6rem;
-      color: #9FA79E;
-      animation: shimmer 2.5s infinite ease-in-out;
-      font-weight: 500;
-      letter-spacing: 1px;
-    }
+  margin-top: 30px; /* adds breathing space from GIF */
+  font-size: 1.6rem;
+  color: #9FA79E;
+  animation: shimmer 2.5s infinite ease-in-out;
+  font-weight: 500;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
 
     @keyframes shimmer {
       0%, 100% {
@@ -88,12 +94,7 @@
   font-weight: bold;
 }
 
-    .crescent {
-      font-size: 3rem;
-      color: #544541;
-      margin-bottom: 10px;
-      animation: float 3s ease-in-out infinite;
-    }
+  
 
     @keyframes float {
       0%, 100% { transform: translateY(0); }
@@ -132,9 +133,7 @@
 
     <!-- Crescent + Ayah -->
     <div class="ayah-block" id="ayah">
-      <div class="crescent">
-        <i class="fas fa-moon"></i>
-      </div>
+     
       <div class="ayah-text">
   <p class="fade-line">
     <strong class="intro">🌙 Allah has promised</strong> those of you who believe and do good that 
