@@ -3,120 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marfooah | A Divine Tech Revolution</title>
+  <title>Marfooah – Coming Soon</title>
   <style>
-    /* 🌙 Base Styles */
     body {
       margin: 0;
-      padding: 2rem;
-      background-color: #27332F; /* replace if you want your GIF bg */
-      color: #ffffff;
+      padding: 0;
+      background-color: #F5EEDC; /* YOUR palette bg */
       font-family: 'Playfair Display', serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: start;
-      min-height: 100vh;
+      color: #333333;
+    }
+
+    .main-container {
       text-align: center;
+      padding: 0;
     }
-.quran::before {
-  content: "🌙 ";
-  font-size: 1.2rem;
-}
 
-    /* ✨ Scroll Animation */
-    .fade-in {
+    .main-gif {
+      width: 100%;
+      max-width: 800px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .ayah-container {
       opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+      transform: translateY(40px);
+      transition: opacity 1.5s ease, transform 1.5s ease;
+      max-width: 700px;
+      margin: 40px auto;
+      font-size: 1.4rem;
+      line-height: 1.8;
+      font-style: italic;
+      padding: 20px;
+      color: #544541; /* Or another shade from your palette */
     }
 
-    .fade-in.visible {
+    .ayah-visible {
       opacity: 1;
       transform: translateY(0);
     }
 
-    /* 🌟 Shimmer Effect */
-    .shimmer {
-      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0) 100%);
-      background-size: 200% 100%;
-      animation: shimmer 2.5s infinite linear;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      display: inline-block;
+    .highlight {
+      color: #A7B9A8;
+      font-weight: bold;
     }
 
-    @keyframes shimmer {
-      0% {
-        background-position: -100% 0;
-      }
-      100% {
-        background-position: 100% 0;
-      }
-    }
-
-    /* 🔠 Text Styling */
-    .tagline {
-      font-size: 1.3rem;
-      margin-top: 1rem;
-      font-style: italic;
-      opacity: 0.8;
-    }
-    body {
-    padding-bottom: 300px;
-    }
-
-    .quran {
-      font-size: 1rem;
-      margin-top: 2.5rem;
-      color: #9FA79E;
-      line-height: 1.7;
-      max-width: 90%;
-    }
-
-    .secure {
-      margin-top: 2.5rem;
-      font-size: 0.85rem;
-      color: #888;
-      font-style: italic;
-    }
-
-    .logo {
-      max-width: 90%;
-      height: auto;
-    }
   </style>
 </head>
 <body>
-  <div class="fade-in">
-    <img src="marfooah-coming-soon.gif" alt="Marfooah Coming Soon" class="logo" />
-  </div>
 
-  <div class="fade-in tagline shimmer">A divine tech revolution is rising...</div>
-
-  <div class="fade-in quran">
+  <div class="main-container">
+    <img src="marfooah.gif" alt="Marfooah Revolution GIF" class="main-gif" />
+        <div class="fade-in quran">
     <strong>Allah has promised</strong> those of you who believe and do good that <strong>He will certainly make them successors in the land</strong> as He did with those before them;<br><br>
     and <strong>will surely establish for them</strong> their faith which He has chosen for them; and <strong>will change</strong>, their fear into security—<br><br>
     <em>“ ˹provided that˺ they worship Me, associating nothing with Me.”</em>  
     <br><br> <strong>But whoever disbelieves after this ˹promise˺, it is they who will be the rebellious.</strong><br><br>
-    <em>— Surah An-Nur (24:55)</em>
-  </div>
+        <em>— Surah An-Nur 24:55</em>
+      </p>
+    </div>
+ 
 
-  <div class="fade-in secure">(Secure site launching soon...)</div>
-
-  <!-- ⚙️ JavaScript for Scroll Observer -->
   <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    });
+    // Ayah scroll animation
+    window.addEventListener('scroll', () => {
+      const ayah = document.getElementById('ayah');
+      const ayahTop = ayah.getBoundingClientRect().top;
+      const triggerPoint = window.innerHeight * 0.85;
 
-    document.querySelectorAll('.fade-in').forEach((el) => {
-      observer.observe(el);
+      if (ayahTop < triggerPoint) {
+        ayah.classList.add('ayah-visible');
+      }
     });
   </script>
+
 </body>
 </html>
